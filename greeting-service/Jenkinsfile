@@ -2,8 +2,8 @@ pipeline{
     agent any
     stages{
         stage("Deploy"){
-            steps{
-            '''
+            steps {
+            sh '''
             oc project zcgbyf-deploy-strategies
             oc start-build greeting-service --follow --wait
             '''   
